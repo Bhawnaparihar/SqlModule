@@ -1,0 +1,6 @@
+-- Module 3 - Lab Exercise 5 - Estimate Storage Savings with Compression
+
+
+-- View compression estimated savings
+EXEC sp_estimate_data_compression_savings 'Payment', 'Timesheet', NULL, NULL, 'ROW';
+EXEC sp_estimate_data_compression_savings 'Payment', 'Timesheet', NULL, NULL, 'PAGE';

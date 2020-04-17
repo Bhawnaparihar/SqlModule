@@ -1,0 +1,22 @@
+Use AdventureWorks2016
+
+
+CREATE VIEW Sales.NewCustomer
+AS
+SELECT CustomerID, FirstName, LastName 
+FROM Sales.CustomerPII;
+
+
+
+
+
+INSERT INTO Sales.NewCustomer
+VALUES
+(10001,'Ed', 'Kish'),
+(10002, 'Kermit', 'Albritton');
+
+
+
+
+SELECT * FROM Sales.NewCustomer 
+ORDER BY CustomerID

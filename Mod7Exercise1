@@ -1,0 +1,15 @@
+-----Columnstore Index on the 
+ Table
+
+SET STATISTICS TIME OFF
+GO
+
+/****** Add a non-clustered index ******/
+CREATE NONCLUSTERED COLUMNSTORE INDEX NCI_FactProductInventory_UnitCost_UnitsOut ON FactProductInventory
+(
+	ProductKey,
+	DateKey,
+	UnitCost,
+	UnitsOut
+)
+GO

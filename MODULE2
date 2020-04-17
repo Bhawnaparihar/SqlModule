@@ -1,0 +1,77 @@
+EXERCISE 1:-
+TASK 3:-
+1.
+CREATE TABLE Customer
+(
+	CustomerId int NOT NULL,
+	FirstName varchar(50) NOT NULL,
+	LastName varchar(50) NOT NULL,
+	City varchar(30) NOT NULL
+);
+
+CREATE TABLE Product
+(
+	ProductId int NOT NULL,
+	ProductName varchar(50) NOT NULL,
+	Price int NOT NULL
+);
+
+CREATE TABLE Item
+(
+	ItemId int NOT NULL,
+	Quantity int NOT NULL
+);
+
+EXERCISE 2:-
+Task 1:-
+3.CREATE SCHEMA DirectMarketing AUTHORIZATION dbo.user
+GO;
+
+EXERCISE 3:-
+TASK 1:-
+CREATE TABLE DirectMarketing.Competitor
+(
+	CompetitorCode nvarchar(6) NOT NULL,
+	Name varchar(30) NOT NULL,
+	[Address] varchar(max) NULL,
+	Date_Entered varchar(10) NULL,
+	Strength_of_competition	varchar(8) NULL,
+	Comments varchar(max) NULL
+	
+);
+GO
+
+TASK 2:-
+CREATE TABLE DirectMarketing.TVAdvertisement
+(
+	TV_Station nvarchar(15) NOT NULL,
+	City nvarchar(25) NULL,
+	CostPerAdvertisement float NULL,
+	TotalCostOfAllAdvertisements float NULL,
+	NumberOfAdvertisements varchar(4) NULL,
+	Date_Of_Advertisement_1 varchar(12) NULL,
+	Time_Of_Advertisement_1	int NULL,
+	Date_Of_Advertisement_2	varchar(12) NULL,
+	Time_Of_Advertisement_2	int NULL,
+	Date_Of_Advertisement_3	varchar(12) NULL,
+	Time_Of_Advertisement_3	int NULL,
+	Date_Of_Advertisement_4	varchar(12) NULL,
+	Time_Of_Advertisement_4	int NULL,
+	Date_Of_Advertisement_5	varchar(12) NULL,
+	Time_Of_Advertisement_5	int NULL
+	
+);
+GO
+
+TASK 3:-
+CREATE TABLE DirectMarketing.CampaignResponse
+(
+	ResponseOccurredWhen datetime NOT NULL, 
+	RelevantProspect int NOT NULL,
+	RespondedHow varchar(8) NOT NULL,
+	ChargeFromReferrer float NULL,
+	RevenueFromResponse	float NULL,
+	ResponseProfit AS (RevenueFromResponse - ChargeFromReferrer) PERSISTED
+	
+);
+GO
